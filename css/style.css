@@ -1,5 +1,5 @@
 /* ============================================================
-   ATLAS BUSINESS — DESIGN SYSTEM & LANDING PAGE STYLES
+   ATLAS BUSINESS — DESIGN SYSTEM & COMPLETE STYLES
    ============================================================ */
 
 /* ========== CSS VARIABLES ========== */
@@ -981,104 +981,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-    .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .footer__links-group {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 768px) {
-    .navbar__nav {
-        position: fixed;
-        top: var(--navbar-height);
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--bg-primary);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 32px 24px;
-        gap: 24px;
-        transform: translateX(100%);
-        transition: transform var(--transition-base);
-        z-index: 999;
-    }
-    .navbar__nav.open {
-        transform: translateX(0);
-    }
-    .navbar__links {
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-    }
-    .navbar__link {
-        font-size: 16px;
-        padding: 8px 0;
-    }
-    .navbar__actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-    }
-    .navbar__actions .btn {
-        width: 100%;
-    }
-    .navbar__hamburger {
-        display: flex;
-    }
-    .hero {
-        padding: 100px 0 60px;
-    }
-    .hero__stats {
-        gap: 24px;
-    }
-    .hero__stat-number {
-        font-size: 24px;
-    }
-    .hero__dashboard-mockup .mockup__body {
-        height: 180px;
-    }
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    .cta-card {
-        padding: 40px 24px;
-    }
-    .footer__links-group {
-        grid-template-columns: 1fr 1fr;
-    }
-    .footer__bottom {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-}
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    .hero__cta-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero__cta-group .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    .footer__links-group {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-}
 /* ============================================================
-   ATLAS BUSINESS — DASHBOARD STYLES (CORRIGIDO)
+   DASHBOARD STYLES (CORRIGIDO – NÃO AFETA A LANDING PAGE)
    ============================================================ */
 
 /* Só aplica flex layout quando a classe dashboard-layout estiver no body */
@@ -1423,8 +1327,86 @@ body.dashboard-layout .dashboard-main {
     color: var(--text-primary);
 }
 
-/* ========== RESPONSIVO ========== */
+/* ========== RESPONSIVO (GERAL + DASHBOARD) ========== */
+@media (max-width: 1024px) {
+    .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer__links-group {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media (max-width: 768px) {
+    .navbar__nav {
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--bg-primary);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 32px 24px;
+        gap: 24px;
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        z-index: 999;
+    }
+    .navbar__nav.open {
+        transform: translateX(0);
+    }
+    .navbar__links {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    .navbar__link {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+    .navbar__actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .navbar__actions .btn {
+        width: 100%;
+    }
+    .navbar__hamburger {
+        display: flex;
+    }
+    .hero {
+        padding: 100px 0 60px;
+    }
+    .hero__stats {
+        gap: 24px;
+    }
+    .hero__stat-number {
+        font-size: 24px;
+    }
+    .hero__dashboard-mockup .mockup__body {
+        height: 180px;
+    }
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-card {
+        padding: 40px 24px;
+    }
+    .footer__links-group {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* Dashboard responsivo */
     .sidebar {
         width: 72px;
     }
@@ -1443,6 +1425,21 @@ body.dashboard-layout .dashboard-main {
     }
 }
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    .hero__cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero__cta-group .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer__links-group {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
     .sidebar {
         width: 0;
         position: fixed;
