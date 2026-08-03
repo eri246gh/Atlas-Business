@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atlas Business - Plataforma de ferramentas inteligentes para micro e médias empresas. Crie propostas, orçamentos, contratos, relatórios e muito mais em segundos.">
+    <meta name="keywords" content="propostas comerciais, orçamentos, contratos, relatórios, calculadora, SaaS, pequenas empresas, gestão empresarial">
+    <meta name="author" content="Atlas Business">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:title" content="Atlas Business - Ferramentas Inteligentes para sua Empresa">
+    <meta property="og:description" content="Crie documentos profissionais em segundos. Sem precisar escrever prompts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atlasbusiness.com">
+    <meta property="og:image" content="https://atlasbusiness.com/og-image.png">
+    <title>Atlas Business — Ferramentas Inteligentes para sua Empresa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+</head>
+<body class="light-mode">
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#" class="navbar__logo" aria-label="Atlas Business - Página inicial">
+                <svg class="navbar__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="currentColor"/>
+                    <path d="M8 22L16 8L24 22H8Z" fill="white" opacity="0.9"/>
+                    <circle cx="16" cy="18" r="2.5" fill="white"/>
+                </svg>
+                <span class="navbar__logo-text">Atlas<span class="navbar__logo-highlight">Business</span></span>
+            </a>
+            <nav class="navbar__nav" id="navbarNav">
+                <ul class="navbar__links">
+                    <li><a href="#ferramentas" class="navbar__link">Ferramentas</a></li>
+                    <li><a href="#como-funciona" class="navbar__link">Como Funciona</a></li>
+                    <li><a href="#beneficios" class="navbar__link">Benefícios</a></li>
+                    <li><a href="#faq" class="navbar__link">FAQ</a></li>
+                </ul>
+                <div class="navbar__actions">
+                    <button class="btn btn--outline btn--sm" id="themeToggle" aria-label="Alternar tema claro/escuro">
+                        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                    </button>
+                    <a href="dashboard.html" class="btn btn--primary btn--sm">Acessar Plataforma</a>
+                </div>
+            </nav>
+            <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero" id="hero">
+            <div class="container hero__inner">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span> Nova plataforma disponível
+                </div>
+                <h1 class="hero__title">
+                    Documentos profissionais <br>
+                    <span class="hero__title-gradient">em segundos</span>, não em horas
+                </h1>
+                <p class="hero__subtitle">
+                    Escolha uma ferramenta, preencha um formulário simples e receba resultados prontos para usar. 
+                    Sem escrever prompts, sem complicação.
+                </p>
+                <div class="hero__cta-group">
+                    <a href="dashboard.html" class="btn btn--primary btn--lg">
+                        Começar Agora
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#ferramentas" class="btn btn--ghost btn--lg">
+                        Ver Ferramentas
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">10k+</span>
+                        <span class="hero__stat-label">Documentos criados</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">5</span>
+                        <span class="hero__stat-label">Ferramentas poderosas</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">98%</span>
+                        <span class="hero__stat-label">Satisfação dos usuários</span>
+                    </div>
+                </div>
+                <div class="hero__dashboard-preview">
+                    <div class="hero__dashboard-mockup">
+                        <div class="mockup__header">
+                            <div class="mockup__dots"><span></span><span></span><span></span></div>
+                            <div class="mockup__search">Atlas Business — Dashboard</div>
+                        </div>
+                        <div class="mockup__body">
+                            <div class="mockup__sidebar">
+                                <div class="mockup__sidebar-item active"></div>
+                                <div class="mockup__sidebar-item"></div>
+                                <div class="mockup__sidebar-item"></div>
+                                <div class="mockup__sidebar-item"></div>
+                                <div class="mockup__sidebar-item"></div>
+                            </div>
+                            <div class="mockup__content">
+                                <div class="mockup__card mockup__card--large"></div>
+                                <div class="mockup__card-group">
+                                    <div class="mockup__card mockup__card--small"></div>
+                                    <div class="mockup__card mockup__card--small"></div>
+                                    <div class="mockup__card mockup__card--small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__glow hero__glow--1"></div>
+                    <div class="hero__glow hero__glow--2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FERRAMENTAS SECTION ==================== -->
+        <section class="tools-section" id="ferramentas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__tag">Ferramentas</span>
+                    <h2 class="section-header__title">Tudo que sua empresa precisa</h2>
+                    <p class="section-header__desc">Cinco ferramentas especializadas para resolver os desafios do dia a dia empresarial.</p>
+                </div>
+                <div class="tools-grid">
+                    <!-- Tool Card 1: Propostas -->
+                    <article class="tool-card" data-tool="propostas">
+                        <div class="tool-card__icon tool-card__icon--blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="tool-card__title">Criador de Propostas Comerciais</h3>
+                        <p class="tool-card__desc">Crie propostas profissionais e persuasivas em minutos. Preencha os campos e obtenha um documento pronto para enviar ao cliente.</p>
+                        <ul class="tool-card__features">
+                            <li>Template profissional</li>
+                            <li>Exportação em PDF e Word</li>
+                            <li>Campos personalizáveis</li>
+                        </ul>
+                        <a href="pages/propostas.html" class="tool-card__link">
+                            Usar Ferramenta
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                    <!-- Tool Card 2: Orçamentos -->
+                    <article class="tool-card" data-tool="orcamentos">
+                        <div class="tool-card__icon tool-card__icon--green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="2" y="3" width="20" height="18" rx="2" ry="2"/>
+                                <line x1="6" y1="8" x2="6" y2="8.01"/>
+                                <line x1="10" y1="8" x2="18" y2="8"/>
+                                <line x1="6" y1="12" x2="6" y2="12.01"/>
+                                <line x1="10" y1="12" x2="18" y2="12"/>
+                                <line x1="6" y1="16" x2="6" y2="16.01"/>
+                                <line x1="10" y1="16" x2="18" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="tool-card__title">Criador de Orçamentos</h3>
+                        <p class="tool-card__desc">Monte orçamentos detalhados com tabelas automáticas, descontos, subtotal e total. Exporte para compartilhar com seus clientes.</p>
+                        <ul class="tool-card__features">
+                            <li>Tabela dinâmica</li>
+                            <li>Cálculos automáticos</li>
+                            <li>Exportação completa</li>
+                        </ul>
+                        <a href="pages/orcamentos.html" class="tool-card__link">
+                            Usar Ferramenta
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                    <!-- Tool Card 3: Contratos -->
+                    <article class="tool-card" data-tool="contratos">
+                        <div class="tool-card__icon tool-card__icon--purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="tool-card__title">Gerador de Contratos</h3>
+                        <p class="tool-card__desc">Escolha o tipo de contrato, preencha os campos essenciais e receba um documento jurídico estruturado e pronto para uso.</p>
+                        <ul class="tool-card__features">
+                            <li>Múltiplos modelos</li>
+                            <li>Cláusulas padrão</li>
+                            <li>Personalização total</li>
+                        </ul>
+                        <a href="pages/contratos.html" class="tool-card__link">
+                            Usar Ferramenta
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                    <!-- Tool Card 4: Relatórios -->
+                    <article class="tool-card" data-tool="relatorios">
+                        <div class="tool-card__icon tool-card__icon--orange">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="tool-card__title">Gerador de Relatórios</h3>
+                        <p class="tool-card__desc">Produza relatórios executivos profissionais com resumo, métricas e análises. Ideal para apresentações e tomadas de decisão.</p>
+                        <ul class="tool-card__features">
+                            <li>Resumo executivo</li>
+                            <li>Exportação em PDF</li>
+                            <li>Estrutura profissional</li>
+                        </ul>
+                        <a href="pages/relatorios.html" class="tool-card__link">
+                            Usar Ferramenta
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                    <!-- Tool Card 5: Calculadora -->
+                    <article class="tool-card" data-tool="calculadora">
+                        <div class="tool-card__icon tool-card__icon--pink">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                                <line x1="8" y1="6" x2="16" y2="6"/>
+                                <circle cx="9" cy="11" r="1.5"/>
+                                <circle cx="15" cy="11" r="1.5"/>
+                                <circle cx="9" cy="16" r="1.5"/>
+                                <circle cx="15" cy="16" r="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="tool-card__title">Calculadora Inteligente</h3>
+                        <p class="tool-card__desc">Calcule preços, lucro, margem e markup de forma rápida. Tome decisões financeiras com segurança e precisão.</p>
+                        <ul class="tool-card__features">
+                            <li>Cálculo de markup</li>
+                            <li>Margem de lucro</li>
+                            <li>Análise instantânea</li>
+                        </ul>
+                        <a href="pages/calculadora.html" class="tool-card__link">
+                            Usar Ferramenta
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== COMO FUNCIONA ==================== -->
+        <section class="how-section" id="como-funciona">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__tag">Como Funciona</span>
+                    <h2 class="section-header__title">Três passos simples</h2>
+                    <p class="section-header__desc">Não precisa ser especialista. Basta seguir o fluxo e obter resultados profissionais.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">01</div>
+                        <div class="step__icon step__icon--blue">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title">Escolha a Ferramenta</h3>
+                        <p class="step__desc">Selecione a ferramenta ideal para sua necessidade: proposta, orçamento, contrato, relatório ou calculadora.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">02</div>
+                        <div class="step__icon step__icon--green">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title">Preencha o Formulário</h3>
+                        <p class="step__desc">Insira os dados nos campos simples. Nada de prompts complexos — apenas informações objetivas.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">03</div>
+                        <div class="step__icon step__icon--purple">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title">Receba o Resultado</h3>
+                        <p class="step__desc">Obtenha um documento profissional formatado. Copie, exporte em PDF ou Word e compartilhe com quem precisar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BENEFÍCIOS ==================== -->
+        <section class="benefits-section" id="beneficios">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__tag">Benefícios</span>
+                    <h2 class="section-header__title">Por que escolher o Atlas Business?</h2>
+                    <p class="section-header__desc">Economize tempo, aumente sua produtividade e impressione seus clientes com documentos impecáveis.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3>Economia de Tempo</h3>
+                        <p>Reduza horas de trabalho para minutos. Documentos que levavam um dia inteiro agora ficam prontos em segundos.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <h3>Resultados Profissionais</h3>
+                        <p>Templates criados por especialistas garantem documentos com aparência premium e conteúdo de alta qualidade.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <h3>100% Seguro</h3>
+                        <p>Seus dados são processados localmente. Nenhuma informação sensível é armazenada em servidores externos.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3>Interface Intuitiva</h3>
+                        <p>Design pensado para facilitar sua vida. Navegação fluida, formulários claros e feedback visual em cada etapa.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3>Suporte Amigável</h3>
+                        <p>Estamos prontos para ajudar. Nossa equipe oferece suporte rápido e eficiente para todas as suas dúvidas.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                        </div>
+                        <h3>Acessível em Qualquer Lugar</h3>
+                        <p>Plataforma 100% web. Acesse do seu computador, tablet ou celular, a qualquer hora e em qualquer lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ ==================== -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-header__tag">FAQ</span>
+                    <h2 class="section-header__title">Perguntas Frequentes</h2>
+                    <p class="section-header__desc">Respostas rápidas para as dúvidas mais comuns sobre o Atlas Business.</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>O Atlas Business é gratuito?</span>
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Sim! O Atlas Business oferece todas as ferramentas gratuitamente durante a fase inicial. Nosso objetivo é ajudar micro e médias empresas a crescerem com documentos profissionais sem custo. Futuramente, planos premium trarão funcionalidades avançadas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Preciso saber escrever prompts?</span>
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Não! Essa é a grande diferença do Atlas Business. Nossas ferramentas funcionam com formulários simples e diretos. Você só precisa preencher os campos solicitados, e o sistema gera o documento completo automaticamente.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Posso exportar os documentos gerados?</span>
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Sim! Todas as ferramentas permitem exportar o resultado em PDF e Word (DOCX). Você também pode copiar o conteúdo para a área de transferência com um clique e colar onde desejar.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Meus dados ficam seguros?</span>
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Totalmente. O processamento dos documentos é feito localmente no seu navegador. Nenhuma informação é enviada para servidores externos. Sua privacidade é nossa prioridade absoluta.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Preciso instalar algum software?</span>
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Não. O Atlas Business é 100% baseado na web. Basta acessar pelo seu navegador favorito (Chrome, Firefox, Safari, Edge) em qualquer dispositivo conectado à internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CTA FINAL ==================== -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 class="cta-card__title">Pronto para transformar sua produtividade?</h2>
+                    <p class="cta-card__desc">Junte-se a milhares de empresas que já confiam no Atlas Business para criar documentos profissionais.</p>
+                    <a href="dashboard.html" class="btn btn--primary btn--lg">
+                        Começar Gratuitamente
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#" class="footer__logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="currentColor"/>
+                        <path d="M8 22L16 8L24 22H8Z" fill="white" opacity="0.9"/>
+                        <circle cx="16" cy="18" r="2.5" fill="white"/>
+                    </svg>
+                    <span>Atlas<span>Business</span></span>
+                </a>
+                <p class="footer__desc">Ferramentas inteligentes para micro e médias empresas. Simplifique sua rotina e impressione seus clientes.</p>
+            </div>
+            <div class="footer__links-group">
+                <div class="footer__links">
+                    <h4>Ferramentas</h4>
+                    <ul>
+                        <li><a href="pages/propostas.html">Propostas Comerciais</a></li>
+                        <li><a href="pages/orcamentos.html">Orçamentos</a></li>
+                        <li><a href="pages/contratos.html">Contratos</a></li>
+                        <li><a href="pages/relatorios.html">Relatórios</a></li>
+                        <li><a href="pages/calculadora.html">Calculadora</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Atlas Business. Todos os direitos reservados.</p>
+            <div class="footer__social">
+                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z"/></svg></a>
+                <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/landing.js"></script>
+</body>
+</html>
