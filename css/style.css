@@ -1077,3 +1077,383 @@ h1, h2, h3, h4, h5, h6 {
         gap: 24px;
     }
 }
+
+/* ============================================================
+   ATLAS BUSINESS — DASHBOARD STYLES
+   ============================================================ */
+
+/* ========== LAYOUT DO DASHBOARD ========== */
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebarContainer {
+    flex-shrink: 0;
+}
+
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: var(--bg-primary);
+    transition: margin-left var(--transition-base);
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: width var(--transition-base), background var(--transition-slow);
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+}
+
+.sidebar--collapsed {
+    width: 72px;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--border-color);
+    min-height: 64px;
+}
+
+.sidebar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sidebar__logo span span {
+    color: var(--accent-blue);
+}
+.sidebar--collapsed .sidebar__logo-text {
+    display: none;
+}
+.sidebar--collapsed .sidebar__logo {
+    gap: 0;
+}
+
+.sidebar__toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-tertiary);
+    transition: all var(--transition-fast);
+    background: none;
+    cursor: pointer;
+}
+.sidebar__toggle:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+.sidebar--collapsed .sidebar__toggle svg {
+    transform: rotate(180deg);
+}
+
+.sidebar__nav {
+    flex: 1;
+    padding: 12px 8px;
+}
+
+.sidebar__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar__item {
+    list-style: none;
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sidebar__link:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar__item--active .sidebar__link {
+    background: var(--accent-blue-bg);
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.sidebar__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: inherit;
+}
+.sidebar__icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar__label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sidebar--collapsed .sidebar__label {
+    display: none;
+}
+
+.sidebar__badge {
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--accent-blue);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    margin-left: auto;
+}
+.sidebar--collapsed .sidebar__badge {
+    display: none;
+}
+
+.sidebar__footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-color);
+}
+.sidebar__footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+.sidebar__footer-link:hover {
+    color: var(--text-primary);
+}
+.sidebar--collapsed .sidebar__footer-link span {
+    display: none;
+}
+
+/* ========== TOPBAR ========== */
+.dashboard-topbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    gap: 16px;
+}
+
+.dashboard-topbar__breadcrumb {
+    font-size: 14px;
+    color: var(--text-tertiary);
+}
+.dashboard-topbar__breadcrumb span:last-child {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.breadcrumb-sep {
+    margin: 0 6px;
+    color: var(--border-color);
+}
+
+.dashboard-topbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dashboard-user__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+.dashboard-user__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ========== CONTEÚDO ========== */
+.dashboard-content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+/* ========== TELA DE BOAS-VINDAS ========== */
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 128px);
+}
+
+.welcome-card {
+    text-align: center;
+    max-width: 600px;
+    animation: fadeInUp 0.5s ease-out;
+}
+.welcome-card h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.welcome-card p {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.welcome-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+.welcome-tool {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.welcome-tool:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.welcome-tool__icon {
+    font-size: 28px;
+}
+
+/* ========== LOADING E ERRO ========== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    gap: 16px;
+    color: var(--text-tertiary);
+}
+
+.loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+.error-state svg {
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+.error-state h3 {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 72px;
+    }
+    .sidebar--collapsed {
+        width: 0;
+        overflow: hidden;
+    }
+    .dashboard-topbar {
+        padding: 0 16px;
+    }
+    .dashboard-content {
+        padding: 20px 16px;
+    }
+    .welcome-tools-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .sidebar {
+        width: 0;
+        position: fixed;
+        z-index: 200;
+        transition: width var(--transition-base);
+    }
+    .sidebar.open {
+        width: 260px;
+    }
+    .dashboard-topbar {
+        padding: 0 12px;
+    }
+}
